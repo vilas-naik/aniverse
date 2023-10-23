@@ -84,7 +84,6 @@ app.post("/anime", async (req, res) => {
         }
         let image = selectedAnime.images.jpg.image_url;
         const palette = await getPalette(image);
-        console.log(palette);
         let malLink = selectedAnime.url;
         let yt = selectedAnime.trailer.url;
         let synopsis = selectedAnime.synopsis;
@@ -103,5 +102,5 @@ app.post("/anime", async (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log(`https://localhost:${port}/`);
+    console.log(`Hosted`);
 });
