@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page</title>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- bg:8,11,20
+    second:98,226,139
+    tertiary:104,217,225 -->
+    <div class="container">
+      <div class="header">
+        <h1 class="heading-text">ANIVERSE</h1>
+        <label class="switch">
+          <input type="checkbox" class="switch__input">
+          <div class="switch__toggle">
+            <div class="switch__handle"></div>
+          </div>
+        </label>
+      </div>
+      <div class="form">
+        <form method="post" id="form">
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Enter any anime or character's name:"
+            required
+          />
+          <input
+            id="anime"
+            type="submit"
+            value="Anime Search!"
+            formaction="/anime"
+          />
+          <input
+            id="character"
+            type="submit"
+            value="Character Search!"
+            formaction="/character"
+          />
+        </form>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(".switch__input").click(function (e) { 
+        $("body").toggleClass("dark-mode");
+      });
+    </script>
+  </body>
+</html>
